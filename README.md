@@ -1,5 +1,7 @@
 For local dev
 
+npm install --save-dev babel-cli
+
 Install http-server: `npm install -g http-server`
 Run http-server: `http-server`
 
