@@ -1,9 +1,22 @@
-workflow "Build" {
-  on = "push"
-  resolves = ["Publish"]
-}
-
-action "Build w/ Webpack" {
-  uses = "mikeal/npx@master"
-  args = "webpack"
-}
+name: build-js-with-npx
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+jobs:
+  call-npx:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Babel
+        run: npm install babel-cli@6 babel-preset-react-app@3
+      - name: Build using Babel
+        run: npx babel src --out-dir . --presets react-app/prod
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.6
+        with:
+          branch: main
+          folder: .

@@ -1,7 +1,7 @@
 {
   "name": "jfong-fmla-clientside",
   "version": "1.0.0",
-  "description": "",
+  "description": "For local dev",
   "main": "index.js",
   "dependencies": {
     "babel-preset-react-app": "^3.1.2",
@@ -15,5 +15,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smedberg/smedberg.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smedberg/smedberg.github.io/issues"
+  },
+  "homepage": "https://github.com/smedberg/smedberg.github.io#readme"
 }
