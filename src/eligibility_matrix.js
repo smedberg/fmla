@@ -18,83 +18,83 @@
 // };
 
 const RESULTS = {
-  fmla: {label: 'Family and Medical Leave Act', description: 'You may be eligible for FMLA.  Lorem ipsum.'},
-  snap: {label: 'Supplemental Nutrition Assistance Program', description: 'You may be eligible for SNAP.  Lorem ipsum.'}
+  not_supported: {label: 'Sorry', description: 'Not supported.  Lorem ipsum.'},
+  not_ca: {label: 'Sorry', description: 'Only supported for CA residents.  Lorem ipsum.'},
+  not_w2: {label: 'Sorry', description: 'Only supported for W2 recipients.  Lorem ipsum.'},
+  low_earner: {label: 'Sorry', description: 'Please check with your employer.  Lorem ipsum.'},
+  high_earner: {label: 'Yay!', description: 'We have more work to do here.  Lorem ipsum.'},
+  catchall: {label: 'Ohno!', description: 'We do not have a coherent response for these choices.  Lorem ipsum.'},
 };
 
 const ELIGIBILITY_MATRIX = [
-
-  // California
   {
-    label: 'Employed in CA',
+    label: 'Unreported time off requirement',
     answers: {
-      us_state_or_territory: 'CA',
-      employed: 'y'
+      why_need_time_off: 'none',
+      confirm_state_ca: undefined,
+      which_state: undefined,
+      w2_employee: undefined,
+      earned_300_dollars: undefined
     },
-    eligibilities: ['fmla']
+    eligibilities: ['not_supported']
   },
   {
-    label: 'Unemployed in CA',
+    label: 'Not California',
     answers: {
-      us_state_or_territory: 'CA',
-      employed: 'n'
+      why_need_time_off: 'any',
+      confirm_state_ca: 'n',
+      which_state: undefined,
+      w2_employee: undefined,
+      earned_300_dollars: undefined
     },
-    eligibilities: ['snap']
+    eligibilities: ['not_ca']
   },
   {
-    label: 'Unknown employment in CA',
+    label: 'No W2',
     answers: {
-      us_state_or_territory: 'CA',
-      employed: 'unsure'
+      why_need_time_off: 'any',
+      confirm_state_ca: 'y',
+      which_state: undefined,
+      w2_employee: 'n',
+      earned_300_dollars: undefined
     },
-    eligibilities: ['fmla', 'snap']
-  },
-
-  // Washington
-  {
-    label: 'Employed in WA',
-    answers: {
-      us_state_or_territory: 'WA',
-      employed: 'y'
-    },
-    eligibilities: ['fmla', 'snap']
+    eligibilities: ['not_w2']
   },
   {
-    label: 'Unemployed in WA',
+    label: 'Less than $300 in 18 months',
     answers: {
-      us_state_or_territory: 'WA',
-      employed: 'n'
+      why_need_time_off: 'any',
+      confirm_state_ca: 'y',
+      which_state: undefined,
+      w2_employee: 'y',
+      earned_300_dollars: 'n'
     },
-    eligibilities: ['snap', 'fmla']
+    eligibilities: ['low_earner']
   },
   {
-    label: 'Unknown employment in WA',
+    label: 'TODO: Incomplete',
     answers: {
-      us_state_or_territory: 'WA',
-      employed: 'unsure'
+      why_need_time_off: 'any',
+      confirm_state_ca: 'y',
+      which_state: undefined,
+      w2_employee: 'y',
+      earned_300_dollars: 'y'
     },
-    eligibilities: ['snap']
+    eligibilities: ['high_earner']
   },
-
-  // All other states
-  {
-    label: 'Employed in other states',
-    answers: {
-      us_state_or_territory: undefined,
-      employed: 'y'
-    },
-    eligibilities: ['fmla', 'snap']
-  },
-
-
+  
+  
   // Last item matches everything- all answers are undefined
   {
-    label: 'Unemployed or unknown in other states',
+    label: 'Catch-all',
     answers: {
-      us_state_or_territory: undefined,
-      employed: undefined
+      why_need_time_off: undefined,
+      confirm_state_ca: undefined,
+      which_state: undefined,
+      w2_employee: undefined,
+      earned_300_dollars: undefined
     },
-    eligibilities: ['snap', 'fmla']
+    eligibilities: ['catchall']
   },
 ]
 
