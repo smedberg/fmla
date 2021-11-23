@@ -59,7 +59,7 @@ var surveyJSON = {
       "type": "radiogroup",
       "name": "earned_300_dollars",
       "visible": false,
-      "visibleIf": "{w2_employee} = 'y'",
+      "visibleIf": "{confirm_state_ca} = 'y' and {w2_employee} = 'y'",
       "title": "Have you earned more than $300 total in the last 18 months?",
       "choices": [{
         "value": "y",
