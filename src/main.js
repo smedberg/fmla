@@ -5,14 +5,16 @@ import {EligibilitiesDisplay} from './eligibilities_display.js';
 let eligibilitiesDisplay;
 
 function onSurveyComplete(results) {
+	console.log("Survey is complete:", eligibilityMatch);
 	let eligibilityMatch = getEligibilityMatch(results.valuesHash);
 	if (eligibilityMatch !== null) {
+		console.log('In onSurveyComplete, found match ', eligibilityMatch);
 		eligibilitiesDisplay.handleChange(eligibilityMatch.eligibilities);
 	} else {
+		console.log('In onSurveyComplete, did not find eligibility match ');
 		// No matches- display warning
 	}
 
-	console.log("Survey is complete:", eligibilityMatch);
 }
 
 ReactDOM.render(
