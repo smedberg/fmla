@@ -17,16 +17,18 @@
 //   }
 // };
 
+
+var REUSABLE_TEXT = '  something reusable';
 var RESULTS = {
-  not_supported: { label: 'Sorry', description: 'Not supported.  Lorem ipsum.' },
-  not_ca: { label: 'Sorry', description: 'Only supported for CA residents.  Lorem ipsum.' },
-  not_ca_red: { label: 'Sorry', description: 'Only supported for CA residents.  RED.' },
-  not_ca_green: { label: 'Sorry', description: 'Only supported for CA residents.  GREEN.' },
-  not_ca_blue: { label: 'Sorry', description: 'Only supported for CA residents.  BLUE.' },
-  not_w2: { label: 'Sorry', description: 'Only supported for W2 recipients.  Lorem ipsum.' },
-  low_earner: { label: 'Sorry', description: 'Please check with your employer.  Lorem ipsum.' },
-  high_earner: { label: 'Yay!', description: 'We have more work to do here.  Lorem ipsum.' },
-  catchall: { label: 'Ohno!', description: 'We do not have a coherent response for these choices.  Lorem ipsum.' }
+  not_supported: { label: 'Sorry', description: 'Not supported.  Lorem ipsum.' + REUSABLE_TEXT },
+  not_ca: { label: 'Sorry', description: 'Only supported for CA residents.  Lorem ipsum.' + REUSABLE_TEXT },
+  not_ca_red: { label: 'Sorry', description: 'Only supported for CA residents.  RED.' + REUSABLE_TEXT },
+  not_ca_green: { label: 'Sorry', description: 'Only supported for CA residents.  GREEN.' + REUSABLE_TEXT },
+  not_ca_blue: { label: 'Sorry', description: 'Only supported for CA residents.  BLUE.' + REUSABLE_TEXT },
+  not_w2: { label: 'Sorry', description: 'Only supported for W2 recipients.  Lorem ipsum.' + REUSABLE_TEXT },
+  low_earner: { label: 'Sorry', description: 'Please check with your employer.  Lorem ipsum.' + REUSABLE_TEXT },
+  high_earner: { label: 'Yay!', description: 'We have more work to do here.  Lorem ipsum.' + REUSABLE_TEXT },
+  catchall: { label: 'Ohno!', description: 'We do not have a coherent response for these choices.  Lorem ipsum.' + REUSABLE_TEXT }
 };
 
 var ELIGIBILITY_MATRIX = [{
