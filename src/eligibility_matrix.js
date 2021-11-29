@@ -20,6 +20,9 @@
 const RESULTS = {
   not_supported: {label: 'Sorry', description: 'Not supported.  Lorem ipsum.'},
   not_ca: {label: 'Sorry', description: 'Only supported for CA residents.  Lorem ipsum.'},
+  not_ca_red: {label: 'Sorry', description: 'Only supported for CA residents.  RED.'},
+  not_ca_green: {label: 'Sorry', description: 'Only supported for CA residents.  GREEN.'},
+  not_ca_blue: {label: 'Sorry', description: 'Only supported for CA residents.  BLUE.'},
   not_w2: {label: 'Sorry', description: 'Only supported for W2 recipients.  Lorem ipsum.'},
   low_earner: {label: 'Sorry', description: 'Please check with your employer.  Lorem ipsum.'},
   high_earner: {label: 'Yay!', description: 'We have more work to do here.  Lorem ipsum.'},
@@ -34,20 +37,46 @@ const ELIGIBILITY_MATRIX = [
       confirm_state_ca: undefined,
       which_state: undefined,
       w2_employee: undefined,
-      earned_300_dollars: undefined
+      earned_300_dollars: undefined,
+      what_color_is_your_rainbow: undefined
     },
     eligibilities: ['not_supported']
   },
   {
-    label: 'Not California',
+    label: 'Not California Red',
     answers: {
       why_need_time_off: 'any',
       confirm_state_ca: 'n',
       which_state: undefined,
       w2_employee: undefined,
-      earned_300_dollars: undefined
+      earned_300_dollars: undefined,
+      what_color_is_your_rainbow: 'red'
     },
-    eligibilities: ['not_ca']
+    eligibilities: ['not_ca_red']
+  },
+  {
+    label: 'Not California green',
+    answers: {
+      why_need_time_off: 'any',
+      confirm_state_ca: 'n',
+      which_state: undefined,
+      w2_employee: undefined,
+      earned_300_dollars: undefined,
+      what_color_is_your_rainbow: 'green'
+    },
+    eligibilities: ['not_ca_green']
+  },
+  {
+    label: 'Not California blue',
+    answers: {
+      why_need_time_off: 'any',
+      confirm_state_ca: 'n',
+      which_state: undefined,
+      w2_employee: undefined,
+      earned_300_dollars: undefined,
+      what_color_is_your_rainbow: 'blue'
+    },
+    eligibilities: ['not_ca_blue']
   },
   {
     label: 'No W2',
@@ -56,7 +85,8 @@ const ELIGIBILITY_MATRIX = [
       confirm_state_ca: 'y',
       which_state: undefined,
       w2_employee: 'n',
-      earned_300_dollars: undefined
+      earned_300_dollars: undefined,
+      what_color_is_your_rainbow: undefined
     },
     eligibilities: ['not_w2']
   },
@@ -67,7 +97,8 @@ const ELIGIBILITY_MATRIX = [
       confirm_state_ca: 'y',
       which_state: undefined,
       w2_employee: 'y',
-      earned_300_dollars: 'n'
+      earned_300_dollars: 'n',
+      what_color_is_your_rainbow: undefined
     },
     eligibilities: ['low_earner']
   },
@@ -78,7 +109,8 @@ const ELIGIBILITY_MATRIX = [
       confirm_state_ca: 'y',
       which_state: undefined,
       w2_employee: 'y',
-      earned_300_dollars: 'y'
+      earned_300_dollars: 'y',
+      what_color_is_your_rainbow: undefined
     },
     eligibilities: ['high_earner']
   },
@@ -92,7 +124,8 @@ const ELIGIBILITY_MATRIX = [
       confirm_state_ca: undefined,
       which_state: undefined,
       w2_employee: undefined,
-      earned_300_dollars: undefined
+      earned_300_dollars: undefined,
+      what_color_is_your_rainbow: undefined
     },
     eligibilities: ['catchall']
   },
