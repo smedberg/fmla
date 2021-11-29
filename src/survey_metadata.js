@@ -90,6 +90,25 @@ var surveyJSON = {
        "text": "No"
       }
      ]
+    },
+    {
+     "type": "dropdown",
+     "name": "what_color_is_your_rainbow",
+     "title": "What color is your rainbow?",
+     "choices": [
+      {
+       "value": "blue",
+       "text": "Blue"
+      },
+      {
+       "value": "green",
+       "text": "Green"
+      },
+      {
+       "value": "red",
+       "text": "Red"
+      }
+     ]
     }
    ]
   }
