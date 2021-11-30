@@ -1,7 +1,26 @@
+import React from 'react';
+import renderHTML from 'react-render-html';
+import ReactMarkdown from 'react-markdown'
+
 import {RESULTS} from './eligibility_matrix.js';
 
 function Eligibility(eligibility) {
   console.log("Rendering eligibility ", eligibility);
+  if (RESULTS[eligibility.value].react) {
+    return React.createElement(RESULTS[eligibility.value].react, null);
+  } else if (RESULTS[eligibility.value].md) {
+    return (
+      <div>
+        <span>{RESULTS[eligibility.value].label}:</span>&nbsp;<ReactMarkdown children={RESULTS[eligibility.value].md} />
+      </div>
+    );
+  } else if (RESULTS[eligibility.value].html) {
+    return (
+      <div>
+        <span>{RESULTS[eligibility.value].label}:</span>&nbsp;<span>{renderHTML(RESULTS[eligibility.value].html)}</span>
+      </div>
+    );
+  }
   return (
     <div>
       {RESULTS[eligibility.value].label}: {RESULTS[eligibility.value].description}

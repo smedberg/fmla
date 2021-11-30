@@ -1,30 +1,13 @@
-// const QUESTIONS = {
-//   us_state_or_territory: {
-//     label: 'What state do you work in?',
-//     answers: {
-//       CA: {label: 'California'},
-//       WA: {label: 'Washington'},
-//       NA: {label: 'Not currently working', }
-//     }
-//   },
-//   employed: {
-//     label: 'Are you currently an employee who receives a W-2 at the end of the year? (If you are currently self-employed, an independent contractor, or unemployed, answer No.)',
-//     answers: {
-//       y: {label: 'Yes'},
-//       n: {label: 'No'},
-//       unsure: {label: 'I am not sure'},
-//     }
-//   }
-// };
+import {EligibilityDisplayBlue} from './eligibility_display_blue.js'
 
 
 const REUSABLE_TEXT = '  something reusable';
 const RESULTS = {
   not_supported: {label: 'Sorry', description: 'Not supported.  Lorem ipsum.' + REUSABLE_TEXT},
   not_ca: {label: 'Sorry', description: 'Only supported for CA residents.  Lorem ipsum.' + REUSABLE_TEXT},
-  not_ca_red: {label: 'Sorry', description: 'Only supported for CA residents.  RED.' + REUSABLE_TEXT},
-  not_ca_green: {label: 'Sorry', description: 'Only supported for CA residents.  GREEN.' + REUSABLE_TEXT},
-  not_ca_blue: {label: 'Sorry', description: 'Only supported for CA residents.  BLUE.' + REUSABLE_TEXT},
+  not_ca_red: {label: 'Sorry', description: 'Only supported for CA residents.  RED.' + REUSABLE_TEXT, html: '<b>only</b> supported for CA residents (this is HTML)'},
+  not_ca_green: {label: 'Sorry', description: 'Only supported for CA residents.  GREEN.' + REUSABLE_TEXT, md: 'only **supported** for CA residents (this is Markdown)'},
+  not_ca_blue: {label: 'Sorry', description: 'Only supported for CA residents.  BLUE.' + REUSABLE_TEXT, react: EligibilityDisplayBlue},
   not_w2: {label: 'Sorry', description: 'Only supported for W2 recipients.  Lorem ipsum.' + REUSABLE_TEXT},
   low_earner: {label: 'Sorry', description: 'Please check with your employer.  Lorem ipsum.' + REUSABLE_TEXT},
   high_earner: {label: 'Yay!', description: 'We have more work to do here.  Lorem ipsum.' + REUSABLE_TEXT},
