@@ -1,3 +1,32 @@
+# Branches
+
+Since we're deploying in Github Pages and we're using React, we use the technique described at https://dev.to/javascripterika/deploy-a-react-app-as-a-github-user-page-with-yarn-3fka to create production deploys.  This technique uses branches in a somewhat unusual way.  The branches are:
+
+* `main`: this branch contains the compiled, minimized, production code.  DO NOT EDIT THIS BRANCH DIRECTLY.
+* `source`: this branch contains the uncompiled code you would normally edit.
+
+To change code, you'd normally do something like:
+
+* `git checkout source`
+* `git pull`
+* `git checkout -b [YOUR BRANCH NAME]`
+* make your changes
+* `git commit`
+* `git push origin [YOUR BRANCH NAME]`
+* Code review, and merge to **source** branch (NOTE: do NOT merge to **main** branch!)
+* Deploy as noted below
+
+# Deploying
+
+See https://dev.to/javascripterika/deploy-a-react-app-as-a-github-user-page-with-yarn-3fka for details on how build/deploy is set up
+
+To deploy:
+
+* `git checkout source`
+* `git pull`
+* `yarn deploy`
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,8 +97,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-## DEPLOYING
-
-See https://dev.to/javascripterika/deploy-a-react-app-as-a-github-user-page-with-yarn-3fka for details on how build/deploy is set up
