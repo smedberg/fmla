@@ -49,58 +49,211 @@ var surveyJSON = {
      "visibleIf": "{confirm_state_ca} = 'n'",
      "title": "Tell us which state or territory you live in",
      "choices": [
-      "Alabama (AL)",
-      "Alaska (AK)",
-      "Arizona (AZ)",
-      "Arkansas (AR)",
-      "California (CA)",
-      "Colorado (CO)",
-      "Connecticut (CT)",
-      "Delaware (DE)",
-      "District of Columbia (DC)",
-      "Florida (FL)",
-      "Georgia (GA)",
-      "Hawaii (HI)",
-      "Idaho (ID)",
-      "Illinois (IL)",
-      "Indiana (IN)",
-      "Iowa (IA)",
-      "Kansas (KS)",
-      "Kentucky (KY)",
-      "Louisiana (LA)",
-      "Maine (ME)",
-      "Maryland (MD)",
-      "Massachusetts (MA)",
-      "Michigan (MI)",
-      "Minnesota (MN)",
-      "Mississippi (MS)",
-      "Missouri (MO)",
-      "Montana (MT)",
-      "Nebraska (NE)",
-      "Nevada (NV)",
-      "New Hampshire (NH)",
-      "New Jersey (NJ)",
-      "New Mexico (NM)",
-      "New York (NY)",
-      "North Carolina (NC)",
-      "North Dakota (ND)",
-      "Ohio (OH)",
-      "Oklahoma (OK)",
-      "Oregon (OR)",
-      "Pennsylvania (PA)",
-      "Rhode Island (RI)",
-      "South Carolina (SC)",
-      "South Dakota (SD)",
-      "Tennessee (TN)",
-      "Texas (TX)",
-      "Utah (UT)",
-      "Vermont (VT)",
-      "Virginia (VA)",
-      "Washington (WA)",
-      "West Virginia (WV)",
-      "Wisconsin (WI)",
-      "Wyoming (WY)"
-     ]
+      {
+       "value": "AL",
+       "text": "Alabama (AL)"
+      },
+      {
+       "value": "AK",
+       "text": "Alaska (AK)"
+      },
+      {
+       "value": "AZ",
+       "text": "Arizona (AZ)"
+      },
+      {
+       "value": "AR",
+       "text": "Arkansas (AR)"
+      },
+      {
+       "value": "CA",
+       "text": "California (CA)"
+      },
+      {
+       "value": "CO",
+       "text": "Colorado (CO)"
+      },
+      {
+       "value": "CT",
+       "text": "Connecticut (CT)"
+      },
+      {
+       "value": "DE",
+       "text": "Delaware (DE)"
+      },
+      {
+       "value": "DC",
+       "text": "District of Columbia (DC)"
+      },
+      {
+       "value": "FL",
+       "text": "Florida (FL)"
+      },
+      {
+       "value": "GA",
+       "text": "Georgia (GA)"
+      },
+      {
+       "value": "HI",
+       "text": "Hawaii (HI)"
+      },
+      {
+       "value": "ID",
+       "text": "Idaho (ID)"
+      },
+      {
+       "value": "IL",
+       "text": "Illinois (IL)"
+      },
+      {
+       "value": "IN",
+       "text": "Indiana (IN)"
+      },
+      {
+       "value": "IA",
+       "text": "Iowa (IA)"
+      },
+      {
+       "value": "KS",
+       "text": "Kansas (KS)"
+      },
+      {
+       "value": "KY",
+       "text": "Kentucky (KY)"
+      },
+      {
+       "value": "LA",
+       "text": "Louisiana (LA)"
+      },
+      {
+       "value": "ME",
+       "text": "Maine (ME)"
+      },
+      {
+       "value": "MD",
+       "text": "Maryland (MD)"
+      },
+      {
+       "value": "MA",
+       "text": "Massachusetts (MA)"
+      },
+      {
+       "value": "MI",
+       "text": "Michigan (MI)"
+      },
+      {
+       "value": "MN",
+       "text": "Minnesota (MN)"
+      },
+      {
+       "value": "MS",
+       "text": "Mississippi (MS)"
+      },
+      {
+       "value": "MO",
+       "text": "Missouri (MO)"
+      },
+      {
+       "value": "MT",
+       "text": "Montana (MT)"
+      },
+      {
+       "value": "NE",
+       "text": "Nebraska (NE)"
+      },
+      {
+       "value": "NV",
+       "text": "Nevada (NV)"
+      },
+      {
+       "value": "NH",
+       "text": "New Hampshire (NH)"
+      },
+      {
+       "value": "NJ",
+       "text": "New Jersey (NJ)"
+      },
+      {
+       "value": "NM",
+       "text": "New Mexico (NM)"
+      },
+      {
+       "value": "NY",
+       "text": "New York (NY)"
+      },
+      {
+       "value": "NC",
+       "text": "North Carolina (NC)"
+      },
+      {
+       "value": "ND",
+       "text": "North Dakota (ND)"
+      },
+      {
+       "value": "OH",
+       "text": "Ohio (OH)"
+      },
+      {
+       "value": "OK",
+       "text": "Oklahoma (OK)"
+      },
+      {
+       "value": "OR",
+       "text": "Oregon (OR)"
+      },
+      {
+       "value": "PA",
+       "text": "Pennsylvania (PA)"
+      },
+      {
+       "value": "RI",
+       "text": "Rhode Island (RI)"
+      },
+      {
+       "value": "SC",
+       "text": "South Carolina (SC)"
+      },
+      {
+       "value": "SD",
+       "text": "South Dakota (SD)"
+      },
+      {
+       "value": "TN",
+       "text": "Tennessee (TN)"
+      },
+      {
+       "value": "TX",
+       "text": "Texas (TX)"
+      },
+      {
+       "value": "UT",
+       "text": "Utah (UT)"
+      },
+      {
+       "value": "VT",
+       "text": "Vermont (VT)"
+      },
+      {
+       "value": "VA",
+       "text": "Virginia (VA)"
+      },
+      {
+       "value": "WA",
+       "text": "Washington (WA)"
+      },
+      {
+       "value": "WV",
+       "text": "West Virginia (WV)"
+      },
+      {
+       "value": "WI",
+       "text": "Wisconsin (WI)"
+      },
+      {
+       "value": "WY",
+       "text": "Wyoming (WY)"
+      }
+      ]
     },
     {
      "type": "radiogroup",
