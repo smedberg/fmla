@@ -2,8 +2,10 @@
   "name": "smedberg.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://smedberg.github.io/",
   "dependencies": {
     "cra-template": "1.1.2",
+    "gh-pages": "^3.2.3",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-markdown": "^7.1.1",
@@ -15,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": [
