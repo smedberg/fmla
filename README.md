@@ -26,6 +26,17 @@ To deploy:
 * `git pull`
 * `yarn deploy`
 
+# Running Locally
+
+* [Install git](https://github.com/git-guides/install-git)
+* [Set up](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git) your Github credentials in git
+* Open a terminal
+* [Clone](https://github.com/git-guides/git-clone) the `source` branch locally via `git clone git@github.com:smedberg/smedberg.github.io.git` or similar
+* Change to the smedberg.github.io directory, e.g. `cd smedberg.github.io`
+* Install [Node.js](https://nodejs.org/en/)
+* Install [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) (one approach is to run `npm install --global yarn`)
+* Run `yarn start`
+
 
 # Getting Started with Create React App
 

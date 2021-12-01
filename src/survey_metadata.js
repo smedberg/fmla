@@ -1,3 +1,25 @@
+/*
+The surveyJSON variable contains the definition of the survey
+that will be displayed to users.
+
+The JSON can be edited by hand if you're feeling brave.
+Alternately, use the GUI at https://surveyjs.io/ can be used
+to edit the survey.  Once complete, the JSON for your survey
+is available via the "JSON Editor" tab in SurveyJS.io.io.
+
+Once you have JSON you would like to use, replace the value
+of the "surveyJSON" variable with that value.  This file should
+look something like:
+
+  var surveyJSON = [YOUR JSON HERE]
+
+  export {surveyJSON};
+
+NOTE: This does NOT define the rules about which users are
+eligible for which programs.  That information is stored in 
+the eligibility_matrix.js file.
+*/
+
 var surveyJSON = {
  "title": "SimpleLeavePlanner",
  "pages": [
