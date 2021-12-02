@@ -1,0 +1,15 @@
+name: build-deploy-js
+on:
+  # Trigger the workflow on merge,
+  # but only for the source branch
+  push:
+    branches:
+      - source
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy
+        run: yaml deploy
