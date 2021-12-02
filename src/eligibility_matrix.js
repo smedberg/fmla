@@ -8,7 +8,7 @@ to users.  For example, one user may get a single result like
 results like 'you are eligible for FMLA' and 'you are eligible for SNAP'.
 */
 const RESULTS = {
-  not_supported: {label: 'Sorry', description: 'Not supported.  Lorem ipsum.'},
+  not_supported: {label: 'Sorry', description: 'This tool does not currently cover non-California workers or non-W-2 workers.'},
   not_ca: {label: 'Sorry', description: 'Only supported for CA residents.  Lorem ipsum.'},
   not_ca_red: {label: 'Sorry', description: 'Only supported for CA residents.  RED.', html: '<b>only</b> supported for CA residents (this is HTML)'},
   not_ca_green: {label: 'Sorry', description: 'Only supported for CA residents.  GREEN.', md: 'only **supported** for CA residents (this is Markdown)'},
@@ -16,6 +16,10 @@ const RESULTS = {
   not_w2: {label: 'Sorry', description: 'Only supported for W2 recipients.  Lorem ipsum.'},
   low_earner: {label: 'Sorry', description: 'Please check with your employer.  Lorem ipsum.'},
   high_earner: {label: 'Yay!', description: 'We have more work to do here.  Lorem ipsum.'},
+  
+  //based on latest survey questions
+  ca_w2_pregnant_high_earner_1yr_notc: {label: 'CA W2 Pregnant CFRA no-C', description: 'You are eligible for 22 weeks off, with 17 of those as paid time off.'},
+  
   catchall: {label: 'Ohno!', description: 'We do not have a coherent response for these choices.  Lorem ipsum.'},
 };
 
@@ -120,6 +124,21 @@ const ELIGIBILITY_MATRIX = [
     eligibilities: ['high_earner']
   },
   
+  // adding one scenario based on real survey questions
+  {
+    label: 'CA W2 Pregnant CFRA no-C',
+    answers: {
+      why_need_time_off: 'pregnant',
+      confirm_state_ca: 'y',
+      which_state: undefined,
+      w2_employee: 'y',
+      earned_300_dollars: 'y',
+      employ_at_least_5: 'yes',
+      work_at_least_1_year_1250_hours: 'yes',
+      planned_c_section: 'no'
+    },
+    eligibilities: ['high_earner']
+  },
   
   // Last item matches everything- all answers are undefined
   {
