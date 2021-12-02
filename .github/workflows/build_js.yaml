@@ -11,5 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install react-scripts
+        run: npm install react-scripts
       - name: Deploy
         run: yarn deploy
